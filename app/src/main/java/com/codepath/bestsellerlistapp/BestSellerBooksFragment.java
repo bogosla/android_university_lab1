@@ -62,7 +62,7 @@ public class BestSellerBooksFragment extends Fragment implements OnListFragmentI
             @Override
             public void onSuccess(List<BestSellerBook> models) {
                 progressBar.hide();
-                recyclerView.setAdapter(new BestSellerBooksRecyclerViewAdapter(models, BestSellerBooksFragment.this));
+                recyclerView.setAdapter(new BestSellerBooksRecyclerViewAdapter( getContext(), models, BestSellerBooksFragment.this));
                 Log.d("BestSellerBooksFragment", "response successful");
             }
 
